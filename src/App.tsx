@@ -4,8 +4,6 @@ import About from './components/About';
 import Launchpad from './components/Launchpad';
 import UniqueFeatures from './components/UniqueFeatures';
 import Students from './components/Students';
-import Collaboration from './components/Collaboration';
-import CollaborationDetails from './components/CollaborationDetails';
 import Testimonials from './components/Testimonials';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
@@ -16,12 +14,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <Launchpad />
+        <About />
         <UniqueFeatures />
         <Students />
-        <Collaboration />
-        <CollaborationDetails />
         <Testimonials />
         <ContactUs />
       </main>

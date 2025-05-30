@@ -6,6 +6,7 @@ import {
   GraduationCap, 
   Brain, 
   Globe,
+  Briefcase,
 } from 'lucide-react';
 
 const features = [
@@ -16,10 +17,10 @@ const features = [
     color: 'bg-primary-100',
   },
   {
-    icon: <Users className="h-6 w-6 text-secondary-600" />,
+    icon: <Users className="h-6 w-6 text-primary-600" />,
     title: 'Collaborative Project System',
     description: 'Work on your own ideas or join others\' projects.',
-    color: 'bg-secondary-100',
+    color: 'bg-primary-100',
   },
   {
     icon: <GraduationCap className="h-6 w-6 text-accent-600" />,
@@ -34,10 +35,16 @@ const features = [
     color: 'bg-primary-100',
   },
   {
-    icon: <Globe className="h-6 w-6 text-secondary-600" />,
+    icon: <Globe className="h-6 w-6 text-primary-600" />,
     title: 'Global Vision',
     description: 'Collaborations in India, Ghana, Nigeria, Uganda and expanding.',
-    color: 'bg-secondary-100',
+    color: 'bg-primary-100',
+  },
+  {
+    icon: <Briefcase className="h-6 w-6 text-primary-600" />,
+    title: 'Entrepreneurship',
+    description: 'Support to start and grow your own profitable ventures.',
+    color: 'bg-primary-100',
   },
 ];
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X, Rocket, User } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const sectionLinks = [
@@ -132,15 +132,39 @@ const Navbar: React.FC = () => {
                 </Link>
               )
             )}
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-70} // Adjust if your navbar height is different
-              className="ml-4 bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm lg:text-base cursor-pointer"
-            >
-              Join TEJSTARTER
-            </Link>
+             {typeof window !== 'undefined' && localStorage.getItem('token') ? (
+              <span
+                className="ml-4 bg-gray-300 text-gray-500 font-medium py-2 px-4 rounded-lg text-sm lg:text-base cursor-not-allowed opacity-60 select-none"
+                title="Already logged in"
+                aria-disabled="true"
+              >
+                Join TEJSTARTER
+              </span>
+            ) : (
+              <a
+                href="/register"
+                className="ml-4 bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm lg:text-base cursor-pointer"
+              >
+                Join TEJSTARTER
+              </a>
+            )}
+            {/* Profile/Login button */}
+            {typeof window !== 'undefined' && localStorage.getItem('token') ? (
+              <a
+                href="/profile"
+                className="ml-4 flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary-100 transition-colors cursor-pointer border border-primary-200"
+                title="Profile"
+              >
+                <User className="h-6 w-6 text-primary-600" />
+              </a>
+            ) : (
+              <a
+                href="/login"
+                className="ml-4 bg-primary-50 hover:bg-primary-100 text-primary-700 font-medium py-2 px-4 rounded-lg transition-colors text-sm lg:text-base cursor-pointer border border-primary-200"
+              >
+                Login
+              </a>
+            )}
           </div>
 
           {/* Mobile Navigation Button */}

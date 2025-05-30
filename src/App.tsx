@@ -17,8 +17,8 @@ function App() {
         <Launchpad />
         <About />
         <UniqueFeatures />
-        <Students />
-        <Testimonials />
+        {/* <Students />
+        <Testimonials /> */}
         <ContactUs />
       </main>
       <Footer />
